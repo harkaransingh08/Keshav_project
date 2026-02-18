@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitkara University | Event Portal</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="client.css">
+    <style>
+        /* Ensure logo displays properly */
+        .logo-img {
+            max-width: 180px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/cu-logo.png" alt="Chitkara University" class="logo-img" 
+                 onerror="this.onerror=null; this.src='https://placehold.co/180x60/8B0000/FFD700?text=CHITKARA'">
+            <div class="logo-text">
+                <span class="uni-name">CHITKARA</span>
+                <span class="event-tag">EVENT HUB</span>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="#events"><i class="fas fa-calendar"></i> Events</a>
+            <a href="#gallery"><i class="fas fa-images"></i> Gallery</a>
+            <a href="#admin"><i class="fas fa-shield-alt"></i> Admin</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Animated Background -->
+    <section class="hero" id="home">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content" data-aos="fade-up">
+            <span class="hero-badge"><i class="fas fa-bolt"></i> SPRING FEST 2026</span>
+            <h1>Where <span class="gradient-text">Memories</span> Are Made</h1>
+            <p>Discover, connect, and celebrate with Chitkara's vibrant campus events. From tech fests to cultural nights, there's something for everyone.</p>
+            <div class="hero-buttons">
+                <a href="#events" class="btn-primary"><i class="fas fa-calendar-check"></i> Explore Events</a>
+                <a href="#featured" class="btn-secondary"><i class="fas fa-play"></i> Watch Highlights</a>
+            </div>
+        </div>
+        
+        <!-- Floating Stats -->
+        <div class="floating-stats">
+            <div class="stat-item" data-aos="fade-left" data-aos-delay="200">
+                <i class="fas fa-calendar-alt"></i>
+                <div>
+                    <span class="stat-number">24+</span>
+                    <span class="stat-label">Events This Month</span>
+                </div>
+            </div>
+            <div class="stat-item" data-aos="fade-left" data-aos-delay="300">
+                <i class="fas fa-users"></i>
+                <div>
+                    <span class="stat-number">2.5K+</span>
+                    <span class="stat-label">Active Students</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Featured Countdown Section -->
+        <section id="featured" class="featured-section">
+            <div class="section-header" data-aos="fade-right">
+                <h2><i class="fas fa-clock"></i> Featured <span class="gradient-text">Event</span></h2>
+                <p>Don't miss the biggest tech fest of the year</p>
+            </div>
+            
+            <div class="featured-card" data-aos="zoom-in">
+                <div class="featured-content">
+                    <div class="featured-badge">⚡ HIGHLIGHT</div>
+                    <h3>Tech Fest 2026: Code & Create</h3>
+                    <p>Join us for 3 days of coding competitions, robotics wars, workshops from Google engineers, and prizes worth ₹2 Lakhs!</p>
+                    
+                    <!-- Countdown Timer -->
+                    <div class="countdown-timer" id="countdown">
+                        <div class="timer-box">
+                            <span class="days" id="days">00</span>
+                            <span class="label">Days</span>
+                        </div>
+                        <div class="timer-box">
+                            <span class="hours" id="hours">00</span>
+                            <span class="label">Hours</span>
+                        </div>
+                        <div class="timer-box">
+                            <span class="minutes" id="minutes">00</span>
+                            <span class="label">Mins</span>
+                        </div>
+                        <div class="timer-box">
+                            <span class="seconds" id="seconds">00</span>
+                            <span class="label">Secs</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-register" onclick="openMultiStepRegisterModal(1)"><i class="fas fa-ticket-alt"></i> Register Now</button>
+                </div>
+                <div class="featured-image">
+                    <img src="https://images.unsplash.com/photo-1540575467069-4ca8f9c3f1b4?w=600&auto=format" alt="Tech Fest" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section with Filters -->
+        <section id="events">
+            <div class="section-header" data-aos="fade-right">
+                <h2><i class="fas fa-calendar-alt"></i> Upcoming <span class="gradient-text">Events</span></h2>
+                <p>Choose your next adventure</p>
+            </div>
+            
+            <!-- Category Filters -->
+            <div class="event-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Events</button>
+                <button class="filter-btn" data-filter="technical">Technical</button>
+                <button class="filter-btn" data-filter="cultural">Cultural</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="workshop">Workshops</button>
+            </div>
+            
+            <!-- Event Grid -->
+            <div class="event-grid" id="eventGrid" data-aos="fade-up" data-aos-delay="100">
+                <!-- Event cards will be dynamically loaded via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Image Gallery Section with Lightbox -->
+        <section id="gallery">
+            <div class="section-header" data-aos="fade-right">
+                <h2><i class="fas fa-camera-retro"></i> Event <span class="gradient-text">Gallery</span></h2>
+                <p>Moments captured from previous events</p>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid" data-aos="zoom-in">
+                <!-- Gallery images will be dynamically loaded -->
+            </div>
+            
+            <!-- Gallery Lightbox Modal -->
+            <div class="lightbox-modal" id="lightbox">
+                <span class="close-lightbox"><i class="fas fa-times"></i></span>
+                <img src="" alt="Gallery Image" class="lightbox-img">
+                <div class="lightbox-caption"></div>
+            </div>
+        </section>
+
+        <!-- Admin Dashboard Mock UI -->
+        <section id="admin">
+            <div class="section-header" data-aos="fade-right">
+                <h2><i class="fas fa-crown"></i> Admin <span class="gradient-text">Dashboard</span></h2>
+                <p>Manage events, registrations, and analytics</p>
+            </div>
+            
+            <div class="admin-dashboard" data-aos="flip-up">
+                <!-- Stats Cards with Icons -->
+                <div class="admin-stats">
+                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="stat-icon"><i class="fas fa-calendar-plus"></i></div>
+                        <div class="stat-details">
+                            <h3>12</h3>
+                            <p>Total Events</p>
+                            <span class="trend up"><i class="fas fa-arrow-up"></i> +3 this week</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-details">
+                            <h3>245</h3>
+                            <p>Registrations</p>
+                            <span class="trend up"><i class="fas fa-arrow-up"></i> +24%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="stat-icon"><i class="fas fa-ticket-alt"></i></div>
+                        <div class="stat-details">
+                            <h3>1.2K</h3>
+                            <p>Tickets Sold</p>
+                            <span class="trend down"><i class="fas fa-arrow-down"></i> 12 remaining</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                        <div class="stat-details">
+                            <h3>5</h3>
+                            <p>Live Now</p>
+                            <span class="trend"><i class="fas fa-circle" style="color: #4CAF50;"></i> Active</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions & Event Management -->
+                <div class="admin-panel">
+                    <div class="panel-header">
+                        <h3><i class="fas fa-tasks"></i> Event Management</h3>
+                        <button class="btn-refresh"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                    
+                    <!-- Event List -->
+                    <div class="event-management-list" id="eventManagementList">
+                        <!-- Event management items will be loaded -->
+                    </div>
+                    
+                    <!-- Progress Bar for Registration -->
+                    <div class="registration-progress">
+                        <div class="progress-header">
+                            <span>Registration Goal</span>
+                            <span>78% Complete</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 78%"></div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-add-event" id="addEventBtn">
+                        <i class="fas fa-plus-circle"></i> Create New Event
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Event Detail Modal (Enhanced) -->
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal"><i class="fas fa-times"></i></span>
+            <div id="modalContent" class="event-detail-container"></div>
+        </div>
+    </div>
+
+    <!-- Registration Modal (Enhanced with Steps) -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeRegisterModal"><i class="fas fa-times"></i></span>
+            
+            <!-- Modal Steps -->
+            <div class="modal-steps">
+                <div class="step active" data-step="1">1. Event</div>
+                <div class="step" data-step="2">2. Details</div>
+                <div class="step" data-step="3">3. Confirm</div>
+            </div>
+            
+            <!-- Step 1: Event Selection -->
+            <div class="step-content" id="step1">
+                <h2><i class="fas fa-calendar-check"></i> Select Event</h2>
+                <div class="event-selection-grid" id="eventSelectionGrid">
+                    <!-- Events will be loaded here -->
+                </div>
+                <button class="btn-next" id="toStep2" disabled>Next <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <!-- Step 2: Registration Form -->
+            <div class="step-content" id="step2" style="display: none;">
+                <h2><i class="fas fa-pen"></i> Your Details</h2>
+                <form id="registrationForm" class="registration-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Full Name *</label>
+                            <input type="text" id="fullName" placeholder="John Doe">
+                            <small class="error-message" id="nameError"></small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Email *</label>
+                            <input type="email" id="email" placeholder="john@chitkara.edu.in">
+                            <small class="error-message" id="emailError"></small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-phone"></i> Phone *</label>
+                            <input type="tel" id="phone" placeholder="+91 98765 43210">
+                            <small class="error-message" id="phoneError"></small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-id-card"></i> College ID *</label>
+                            <input type="text" id="collegeId" placeholder="CS2023001">
+                            <small class="error-message" id="collegeIdError"></small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-graduation-cap"></i> Department</label>
+                        <select id="department">
+                            <option value="">Select Department</option>
+                            <option value="cse">Computer Science</option>
+                            <option value="ece">Electronics</option>
+                            <option value="mech">Mechanical</option>
+                            <option value="civil">Civil</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">terms and conditions</a> *</label>
+                        <small class="error-message" id="termsError"></small>
+                    </div>
+                </form>
+                
+                <div class="form-navigation">
+                    <button class="btn-prev" id="backToStep1"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button class="btn-next" id="toStep3">Continue <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- Step 3: Confirmation -->
+            <div class="step-content" id="step3" style="display: none;">
+                <div class="confirmation-box">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Almost Done!</h2>
+                    <p>Please review your registration details</p>
+                    
+                    <div class="summary-card" id="registrationSummary">
+                        <!-- Summary will be populated -->
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button class="btn-prev" id="backToStep2"><i class="fas fa-arrow-left"></i> Edit</button>
+                        <button type="submit" form="registrationForm" class="btn-submit">Confirm Registration <i class="fas fa-check"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Toast Notification -->
+    <div class="toast-notification" id="successToast">
+        <i class="fas fa-check-circle"></i>
+        <span>Registration Successful!</span>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab" id="fabButton">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="client.js"></script>
+    
+    <!-- Error Suppression Script -->
+    <script>
+    (function() {
+        // Suppress extension-related errors
+        const originalOnError = window.onerror;
+        
+        window.onerror = function(message, source, lineno, colno, error) {
+            if (message && (
+                message.includes('listener indicated') || 
+                message.includes('message channel closed') ||
+                message.includes('runtime.lastError')
+            )) {
+                return true;
+            }
+            if (originalOnError) {
+                return originalOnError.apply(this, arguments);
+            }
+            return false;
+        };
+        
+        window.addEventListener('unhandledrejection', function(event) {
+            if (event.reason && event.reason.message && (
+                event.reason.message.includes('listener indicated') ||
+                event.reason.message.includes('message channel closed')
+            )) {
+                event.preventDefault();
+            }
+        });
+    })();
+
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
+
+    // Mobile Menu Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.querySelector('.preloader');
+            if (preloader) {
+                preloader.classList.add('hidden');
+            }
+        });
+
+        // Scroll to top button
+        const fab = document.getElementById('fabButton');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                fab.classList.add('visible');
+            } else {
+                fab.classList.remove('visible');
+            }
+        });
+
+        // Scroll to top function
+        fab.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+                
+                // Update active class
+                document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Close mobile menu
+                navLinks.classList.remove('active');
+            });
+        });
+    });
+    </script>
+</body>
+</html>
