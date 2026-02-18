@@ -1,4 +1,3 @@
-// ===== DATA STORE (Mock Data) =====
 const eventsData = [
     {
         id: 1,
@@ -8,7 +7,7 @@ const eventsData = [
         venue: "Main Auditorium",
         description: "Annual technical festival with coding competitions, robotics, and workshops from top industry experts including Google and Microsoft engineers.",
         shortDesc: "Coding, robotics & workshops",
-        image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&auto=format",
+        image: "https://www.chitkara.edu.in/wp-content/themes/chitkara/images/2026/home-page/slider/litfest-2026-banner-mob.webp",
         category: "Technical",
         registeredCount: 156,
         capacity: 300,
@@ -23,7 +22,7 @@ const eventsData = [
         venue: "Open Air Theatre",
         description: "Annual cultural extravaganza featuring music, dance, drama, and fashion show by college students.",
         shortDesc: "Music, dance & drama performances",
-        image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&auto=format",
+        image: "https://www.chitkara.edu.in/wp-content/uploads/2022/08/cultural-night-banner.jpg",
         category: "Cultural",
         registeredCount: 320,
         capacity: 500,
@@ -38,7 +37,7 @@ const eventsData = [
         venue: "University Sports Complex",
         description: "Inter-college sports competition including cricket, football, basketball, and athletics.",
         shortDesc: "Cricket, football, basketball & more",
-        image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&auto=format",
+        image: "https://www.chitkara.edu.in/wp-content/uploads/2024/07/Annual-Sports-Meet-banner.jpg",
         category: "Sports",
         registeredCount: 210,
         capacity: 400,
@@ -53,7 +52,7 @@ const eventsData = [
         venue: "Seminar Hall",
         description: "Distinguished speaker shares insights on artificial intelligence and future career paths.",
         shortDesc: "AI & future careers",
-        image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&auto=format",
+        image: "https://www.chitkara.edu.in/wp-content/uploads/2025/09/Protothon-AI-2025-banner.jpg",
         category: "Academic",
         registeredCount: 89,
         capacity: 150,
@@ -68,7 +67,7 @@ const eventsData = [
         venue: "CS Department",
         description: "24-hour coding marathon to build innovative solutions for real-world problems.",
         shortDesc: "24-hour coding challenge",
-        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&auto=format",
+        image: "https://www.chitkara.edu.in/wp-content/uploads/2018/04/26-hour-national-level-hackathon-%E2%80%98OctaHacks%E2%80%99-at-Chitkara-University.jpg",
         category: "Technical",
         registeredCount: 67,
         capacity: 100,
@@ -83,7 +82,7 @@ const eventsData = [
         venue: "College Lawn",
         description: "Networking event with distinguished alumni.",
         shortDesc: "Networking with alumni",
-        image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&auto=format",
+        image: "https://www.chitkara.edu.in/wp-content/uploads/2022/12/4.jpg",
         category: "Networking",
         registeredCount: 145,
         capacity: 200,
@@ -98,7 +97,7 @@ const eventsData = [
         venue: "Lab 301",
         description: "Hands-on workshop on MERN stack development.",
         shortDesc: "MERN Stack Workshop",
-        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&auto=format",
+        image: "https://www.chitkara.edu.in/wp-content/uploads/2018/03/BCA.jpg",
         category: "Workshop",
         registeredCount: 45,
         capacity: 50,
@@ -113,7 +112,7 @@ const eventsData = [
         venue: "Innovation Hub",
         description: "Pitch your startup ideas to investors.",
         shortDesc: "Pitch to investors",
-        image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&auto=format",
+        image: "https://www.chitkara.edu.in/wp-content/themes/chitkara/images/cas/startup/startup-banner1-mob.webp",
         category: "Workshop",
         registeredCount: 23,
         capacity: 30,
@@ -124,15 +123,14 @@ const eventsData = [
 
 // Gallery images data
 const galleryImages = [
-    { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&auto=format", caption: "Tech Fest 2025 - Coding Competition" },
-    { src: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&auto=format", caption: "Cultural Night 2025 - Dance Performance" },
-    { src: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&auto=format", caption: "Sports Meet 2025 - Football Final" },
-    { src: "https://images.unsplash.com/photo-1591115765373-5207764f72e4?w=600&auto=format", caption: "Hackathon 2025 - Winners" },
-    { src: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&auto=format", caption: "Alumni Meet 2025" },
-    { src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&auto=format", caption: "Workshop - Web Development" }
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWtxxRzphmRKQb1sPJdCHtXC6Z6bfDlfifw&s", caption: "Valintine Day 2026" },
+    { src: "https://www.chitkara.edu.in/wp-content/uploads/2014/03/holi_festival.jpg", caption: "Holi 2025" },
+    { src: "https://www.chitkara.edu.in/wp-content/uploads/2022/01/lohri-celebration.jpg", caption: "Lohri 2026" },
+    { src: "https://www.chitkara.edu.in/wp-content/uploads/2025/04/christmas-banner.jpg", caption: "Christmas 2025" },
+    { src: "https://www.chitkarauniversity.edu.in/images/Diwali-Charity-Fest-Nov-7th-2023/pic03.jpg", caption: "Diwali 2025" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRpczOMB-XXaTwB7SWNlaKTbdY5QBcD_4P0Q&s", caption: "Sourabh Raaj Jain Inspires B.Ed. Students at Chitkara University" }
 ];
 
-// ===== DOM ELEMENTS =====
 const eventGrid = document.getElementById('eventGrid');
 const galleryGrid = document.getElementById('galleryGrid');
 const eventModal = document.getElementById('eventModal');
@@ -159,12 +157,10 @@ const navLinks = document.getElementById('navLinks');
 const fabButton = document.getElementById('fabButton');
 const closeLightbox = document.querySelector('.close-lightbox');
 
-// ===== STATE MANAGEMENT =====
 let currentEventId = null;
 let selectedEventForRegistration = null;
 let currentFilter = 'all';
 
-// ===== UTILITY FUNCTIONS =====
 function formatDate(dateString) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString('en-US', options);
@@ -196,7 +192,6 @@ function clearErrors() {
     document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
 }
 
-// ===== UPDATE COUNTDOWN =====
 function updateCountdown() {
     const featuredEvent = eventsData.find(e => e.featured) || eventsData[0];
     const timeRemaining = getTimeRemaining(featuredEvent.date);
@@ -221,7 +216,6 @@ function updateCountdown() {
     }
 }
 
-// ===== RENDER EVENT CARDS =====
 function renderEventCards(filter = 'all') {
     if (!eventGrid) return;
     
@@ -264,7 +258,6 @@ function renderEventCards(filter = 'all') {
     });
 }
 
-// ===== OPEN EVENT DETAIL MODAL =====
 function openEventDetail(eventId) {
     const event = eventsData.find(e => e.id === eventId);
     if (!event || !modalContent) return;
@@ -352,7 +345,6 @@ function openEventDetail(eventId) {
     });
 }
 
-// ===== MULTI-STEP REGISTRATION =====
 function openMultiStepRegisterModal(eventId = null) {
     if (!registerModal) return;
     
@@ -530,7 +522,6 @@ function validateStep2() {
     return isValid;
 }
 
-// ===== RENDER GALLERY =====
 function renderGallery() {
     if (!galleryGrid) return;
     
@@ -560,7 +551,6 @@ function openLightbox(index) {
     lightbox.classList.add('active');
 }
 
-// ===== RENDER ADMIN EVENT LIST =====
 function renderAdminEventList() {
     if (!eventManagementList) return;
     
@@ -575,7 +565,6 @@ function renderAdminEventList() {
     });
 }
 
-// ===== FILTER EVENT CARDS =====
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         filterBtns.forEach(b => b.classList.remove('active'));
@@ -586,7 +575,6 @@ filterBtns.forEach(btn => {
     });
 });
 
-// ===== CLOSE MODALS =====
 if (closeModal) {
     closeModal.addEventListener('click', () => {
         eventModal.classList.remove('active');
@@ -629,7 +617,6 @@ if (closeLightbox) {
     });
 }
 
-// ===== REGISTRATION SUBMISSION =====
 if (registrationForm) {
     registrationForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -664,21 +651,18 @@ if (registrationForm) {
     });
 }
 
-// ===== ADD EVENT BUTTON =====
 if (addEventBtn) {
     addEventBtn.addEventListener('click', () => {
         alert('Admin: Create new event form would open here.');
     });
 }
 
-// ===== MOBILE MENU =====
 if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
 }
 
-// ===== FAB BUTTON =====
 if (fabButton) {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
@@ -693,7 +677,6 @@ if (fabButton) {
     });
 }
 
-// ===== SMOOTH SCROLL =====
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -711,7 +694,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// ===== PARTICLES EFFECT =====
 function createParticles() {
     const particlesContainer = document.getElementById('particles');
     if (!particlesContainer) return;
@@ -728,7 +710,6 @@ function createParticles() {
     }
 }
 
-// ===== PRELOADER =====
 window.addEventListener('load', () => {
     const preloader = document.querySelector('.preloader');
     if (preloader) {
@@ -736,7 +717,6 @@ window.addEventListener('load', () => {
     }
 });
 
-// ===== INITIALIZE =====
 document.addEventListener('DOMContentLoaded', () => {
     renderEventCards();
     renderGallery();
@@ -755,6 +735,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// ===== EXPOSE GLOBALLY =====
 window.openEventDetail = openEventDetail;
 window.openMultiStepRegisterModal = openMultiStepRegisterModal;

@@ -5,25 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chitkara University | Event Portal</title>
     
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="client.css">
 </head>
 <body>
-    <!-- Preloader -->
     <div class="preloader">
         <div class="loader"></div>
     </div>
 
-    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="logo">
             <img src="images/cu-logo.png" alt="Chitkara University" class="logo-img" 
@@ -34,7 +28,6 @@
             </div>
         </div>
         
-        <!-- Mobile Menu Toggle -->
         <div class="menu-toggle" id="menuToggle">
             <i class="fas fa-bars"></i>
         </div>
@@ -47,12 +40,9 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Video Background (replaces red) -->
     <section class="hero" id="home">
-        <!-- Video Background -->
         <video autoplay muted loop playsinline id="heroVideo">
             <source src="https://assets.mixkit.co/videos/40858/40858-720.mp4" type="video/mp4">
-            <!-- Fallback: campus video from mixkit (calm tech) -->
             Your browser does not support the video tag.
         </video>
         <div class="hero-particles" id="particles"></div>
@@ -66,7 +56,6 @@
             </div>
         </div>
         
-        <!-- Floating Stats -->
         <div class="floating-stats">
             <div class="stat-item" data-aos="fade-left" data-aos-delay="200">
                 <i class="fas fa-calendar-alt"></i>
@@ -85,9 +74,7 @@
         </div>
     </section>
 
-    <!-- Main Container -->
     <div class="container">
-        <!-- Featured Countdown Section -->
         <section id="featured" class="featured-section">
             <div class="section-header" data-aos="fade-right">
                 <h2><i class="fas fa-clock"></i> Featured <span class="gradient-text">Event</span></h2>
@@ -100,7 +87,6 @@
                     <h3>Tech Fest 2026: Code & Create</h3>
                     <p>Join us for 3 days of coding competitions, robotics wars, workshops from Google engineers, and prizes worth ₹2 Lakhs!</p>
                     
-                    <!-- Countdown Timer -->
                     <div class="countdown-timer" id="countdown">
                         <div class="timer-box">
                             <span class="days" id="days">00</span>
@@ -128,14 +114,12 @@
             </div>
         </section>
 
-        <!-- Events Section with Filters -->
         <section id="events">
             <div class="section-header" data-aos="fade-right">
                 <h2><i class="fas fa-calendar-alt"></i> Upcoming <span class="gradient-text">Events</span></h2>
                 <p>Choose your next adventure</p>
             </div>
             
-            <!-- Category Filters -->
             <div class="event-filters" data-aos="fade-up">
                 <button class="filter-btn active" data-filter="all">All Events</button>
                 <button class="filter-btn" data-filter="technical">Technical</button>
@@ -144,25 +128,19 @@
                 <button class="filter-btn" data-filter="workshop">Workshops</button>
             </div>
             
-            <!-- Event Grid -->
             <div class="event-grid" id="eventGrid" data-aos="fade-up" data-aos-delay="100">
-                <!-- Event cards will be dynamically loaded via JavaScript -->
             </div>
         </section>
 
-        <!-- Image Gallery Section with Lightbox -->
         <section id="gallery">
             <div class="section-header" data-aos="fade-right">
                 <h2><i class="fas fa-camera-retro"></i> Event <span class="gradient-text">Gallery</span></h2>
                 <p>Moments captured from previous events</p>
             </div>
             
-            <!-- Gallery Grid -->
             <div class="gallery-grid" id="galleryGrid" data-aos="zoom-in">
-                <!-- Gallery images will be dynamically loaded -->
             </div>
             
-            <!-- Gallery Lightbox Modal -->
             <div class="lightbox-modal" id="lightbox">
                 <span class="close-lightbox"><i class="fas fa-times"></i></span>
                 <img src="" alt="Gallery Image" class="lightbox-img">
@@ -170,7 +148,6 @@
             </div>
         </section>
 
-        <!-- Admin Dashboard Mock UI -->
         <section id="admin">
             <div class="section-header" data-aos="fade-right">
                 <h2><i class="fas fa-crown"></i> Admin <span class="gradient-text">Dashboard</span></h2>
@@ -178,7 +155,6 @@
             </div>
             
             <div class="admin-dashboard" data-aos="flip-up">
-                <!-- Stats Cards with Icons -->
                 <div class="admin-stats">
                     <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
                         <div class="stat-icon"><i class="fas fa-calendar-plus"></i></div>
@@ -217,19 +193,15 @@
                     </div>
                 </div>
                 
-                <!-- Quick Actions & Event Management -->
                 <div class="admin-panel">
                     <div class="panel-header">
                         <h3><i class="fas fa-tasks"></i> Event Management</h3>
                         <button class="btn-refresh"><i class="fas fa-sync-alt"></i></button>
                     </div>
                     
-                    <!-- Event List -->
                     <div class="event-management-list" id="eventManagementList">
-                        <!-- Event management items will be loaded -->
                     </div>
                     
-                    <!-- Progress Bar for Registration -->
                     <div class="registration-progress">
                         <div class="progress-header">
                             <span>Registration Goal</span>
@@ -248,7 +220,6 @@
         </section>
     </div>
 
-    <!-- Event Detail Modal (Enhanced) -->
     <div class="modal" id="eventModal">
         <div class="modal-content">
             <span class="close-modal" id="closeModal"><i class="fas fa-times"></i></span>
@@ -256,28 +227,23 @@
         </div>
     </div>
 
-    <!-- Registration Modal (Enhanced with Steps) -->
     <div class="modal" id="registerModal">
         <div class="modal-content">
             <span class="close-modal" id="closeRegisterModal"><i class="fas fa-times"></i></span>
             
-            <!-- Modal Steps -->
             <div class="modal-steps">
                 <div class="step active" data-step="1">1. Event</div>
                 <div class="step" data-step="2">2. Details</div>
                 <div class="step" data-step="3">3. Confirm</div>
             </div>
             
-            <!-- Step 1: Event Selection -->
             <div class="step-content" id="step1">
                 <h2><i class="fas fa-calendar-check"></i> Select Event</h2>
                 <div class="event-selection-grid" id="eventSelectionGrid">
-                    <!-- Events will be loaded here -->
                 </div>
                 <button class="btn-next" id="toStep2" disabled>Next <i class="fas fa-arrow-right"></i></button>
             </div>
             
-            <!-- Step 2: Registration Form -->
             <div class="step-content" id="step2" style="display: none;">
                 <h2><i class="fas fa-pen"></i> Your Details</h2>
                 <form id="registrationForm" class="registration-form">
@@ -333,7 +299,6 @@
                 </div>
             </div>
             
-            <!-- Step 3: Confirmation -->
             <div class="step-content" id="step3" style="display: none;">
                 <div class="confirmation-box">
                     <i class="fas fa-check-circle"></i>
@@ -341,7 +306,6 @@
                     <p>Please review your registration details</p>
                     
                     <div class="summary-card" id="registrationSummary">
-                        <!-- Summary will be populated -->
                     </div>
                     
                     <div class="form-navigation">
@@ -353,18 +317,15 @@
         </div>
     </div>
 
-    <!-- Success Toast Notification -->
     <div class="toast-notification" id="successToast">
         <i class="fas fa-check-circle"></i>
         <span>Registration Successful!</span>
     </div>
 
-    <!-- Floating Action Button -->
     <button class="fab" id="fabButton">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="client.js"></script>
 </body>
