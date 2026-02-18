@@ -16,13 +16,6 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="client.css">
-    <style>
-        /* Ensure logo displays properly */
-        .logo-img {
-            max-width: 180px;
-            height: auto;
-        }
-    </style>
 </head>
 <body>
     <!-- Preloader -->
@@ -54,8 +47,14 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Animated Background -->
+    <!-- Hero Section with Video Background (replaces red) -->
     <section class="hero" id="home">
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline id="heroVideo">
+            <source src="https://assets.mixkit.co/videos/40858/40858-720.mp4" type="video/mp4">
+            <!-- Fallback: campus video from mixkit (calm tech) -->
+            Your browser does not support the video tag.
+        </video>
         <div class="hero-particles" id="particles"></div>
         <div class="hero-content" data-aos="fade-up">
             <span class="hero-badge"><i class="fas fa-bolt"></i> SPRING FEST 2026</span>
@@ -368,99 +367,5 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="client.js"></script>
-    
-    <!-- Error Suppression Script -->
-    <script>
-    (function() {
-        // Suppress extension-related errors
-        const originalOnError = window.onerror;
-        
-        window.onerror = function(message, source, lineno, colno, error) {
-            if (message && (
-                message.includes('listener indicated') || 
-                message.includes('message channel closed') ||
-                message.includes('runtime.lastError')
-            )) {
-                return true;
-            }
-            if (originalOnError) {
-                return originalOnError.apply(this, arguments);
-            }
-            return false;
-        };
-        
-        window.addEventListener('unhandledrejection', function(event) {
-            if (event.reason && event.reason.message && (
-                event.reason.message.includes('listener indicated') ||
-                event.reason.message.includes('message channel closed')
-            )) {
-                event.preventDefault();
-            }
-        });
-    })();
-
-    // Initialize AOS
-    AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100
-    });
-
-    // Mobile Menu Toggle
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        
-        if (menuToggle) {
-            menuToggle.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-            });
-        }
-
-        // Preloader
-        window.addEventListener('load', function() {
-            const preloader = document.querySelector('.preloader');
-            if (preloader) {
-                preloader.classList.add('hidden');
-            }
-        });
-
-        // Scroll to top button
-        const fab = document.getElementById('fabButton');
-        
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) {
-                fab.classList.add('visible');
-            } else {
-                fab.classList.remove('visible');
-            }
-        });
-
-        // Scroll to top function
-        fab.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                if (targetSection) {
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                }
-                
-                // Update active class
-                document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-                this.classList.add('active');
-                
-                // Close mobile menu
-                navLinks.classList.remove('active');
-            });
-        });
-    });
-    </script>
 </body>
 </html>

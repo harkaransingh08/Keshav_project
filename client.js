@@ -1,5 +1,3 @@
-// client.js - Enhanced Interactive functionality for Chitkara University Event Portal
-
 // ===== DATA STORE (Mock Data) =====
 const eventsData = [
     {
@@ -10,7 +8,7 @@ const eventsData = [
         venue: "Main Auditorium",
         description: "Annual technical festival with coding competitions, robotics, and workshops from top industry experts including Google and Microsoft engineers.",
         shortDesc: "Coding, robotics & workshops",
-        image: "https://www.chitkarauniversity.edu.in/wp-content/uploads/2024/01/build-athon-banner.jpg",
+        image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&auto=format",
         category: "Technical",
         registeredCount: 156,
         capacity: 300,
@@ -23,9 +21,9 @@ const eventsData = [
         date: "2026-04-20",
         time: "6:00 PM - 10:00 PM",
         venue: "Open Air Theatre",
-        description: "Annual cultural extravaganza featuring music, dance, drama, and fashion show by college students. Celebrity judges and exciting performances.",
+        description: "Annual cultural extravaganza featuring music, dance, drama, and fashion show by college students.",
         shortDesc: "Music, dance & drama performances",
-        image: "https://www.chitkara.edu.in/wp-content/uploads/2025/04/Afinity-thumb.jpg",
+        image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=600&auto=format",
         category: "Cultural",
         registeredCount: 320,
         capacity: 500,
@@ -38,9 +36,9 @@ const eventsData = [
         date: "2026-05-05",
         time: "9:00 AM - 5:00 PM",
         venue: "University Sports Complex",
-        description: "Inter-college sports competition including cricket, football, basketball, and athletics. Trophies and medals for winners.",
+        description: "Inter-college sports competition including cricket, football, basketball, and athletics.",
         shortDesc: "Cricket, football, basketball & more",
-        image: "https://www.chitkaraschool.in/wp-content/uploads/2025/02/Chitkara-Lit-Fest.jpg",
+        image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&auto=format",
         category: "Sports",
         registeredCount: 210,
         capacity: 400,
@@ -49,11 +47,11 @@ const eventsData = [
     },
     {
         id: 4,
-        title: "Guest Lecture: AI Revolution",
+        title: "Guest Lecture: AI",
         date: "2026-03-10",
         time: "2:00 PM - 4:00 PM",
         venue: "Seminar Hall",
-        description: "Distinguished speaker from industry shares insights on artificial intelligence and future career paths. Interactive Q&A session included.",
+        description: "Distinguished speaker shares insights on artificial intelligence and future career paths.",
         shortDesc: "AI & future careers",
         image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&auto=format",
         category: "Academic",
@@ -68,7 +66,7 @@ const eventsData = [
         date: "2026-03-25",
         time: "9:00 AM (24 hrs)",
         venue: "CS Department",
-        description: "24-hour coding marathon to build innovative solutions for real-world problems. Exciting prizes worth ₹50,000!",
+        description: "24-hour coding marathon to build innovative solutions for real-world problems.",
         shortDesc: "24-hour coding challenge",
         image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&auto=format",
         category: "Technical",
@@ -83,9 +81,9 @@ const eventsData = [
         date: "2026-04-02",
         time: "5:00 PM onwards",
         venue: "College Lawn",
-        description: "Networking event with distinguished alumni. Reconnect and build professional relationships with industry leaders.",
+        description: "Networking event with distinguished alumni.",
         shortDesc: "Networking with alumni",
-        image: "https://www.chitkarauniversity.edu.in/wp-content/uploads/2024/02/Emerge-Fest-thumb.jpg",
+        image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&auto=format",
         category: "Networking",
         registeredCount: 145,
         capacity: 200,
@@ -94,13 +92,13 @@ const eventsData = [
     },
     {
         id: 7,
-        title: "Workshop: Web Development",
+        title: "Workshop: Web Dev",
         date: "2026-03-18",
         time: "10:00 AM - 4:00 PM",
         venue: "Lab 301",
-        description: "Hands-on workshop on MERN stack development. Build a complete project by end of day.",
+        description: "Hands-on workshop on MERN stack development.",
         shortDesc: "MERN Stack Workshop",
-        image: "https://www.chitkara.edu.in/wp-content/uploads/2024/11/rangrezz-banner.jpg",
+        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&auto=format",
         category: "Workshop",
         registeredCount: 45,
         capacity: 50,
@@ -109,13 +107,13 @@ const eventsData = [
     },
     {
         id: 8,
-        title: "Startup Pitch Competition",
+        title: "Startup Pitch",
         date: "2026-03-28",
         time: "11:00 AM - 5:00 PM",
         venue: "Innovation Hub",
-        description: "Pitch your startup ideas to investors. Winner gets incubation support and funding of ₹1 Lakh.",
+        description: "Pitch your startup ideas to investors.",
         shortDesc: "Pitch to investors",
-        image: "https://www.chitkara.edu.in/wp-content/uploads/2023/02/litfest-banner.jpg",
+        image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&auto=format",
         category: "Workshop",
         registeredCount: 23,
         capacity: 30,
@@ -126,14 +124,12 @@ const eventsData = [
 
 // Gallery images data
 const galleryImages = [
-    { src: "https://www.chitkara.edu.in/wp-content/uploads/2025/04/Xpect-banner.jpg", caption: "Tech Fest 2025 - Coding Competition" },
-    { src: "https://www.chitkara.edu.in/wp-content/uploads/2022/08/cultural-night-banner.jpg", caption: "Cultural Night 2025 - Dance Performance" },
-    { src: "https://www.chitkara.edu.in/wp-content/uploads/2024/10/Football-Tournament-banner.jpg", caption: "Sports Meet 2025 - Football Final" },
-    { src: "https://www.chitkara.edu.in/wp-content/uploads/2025/09/Protothon-AI-2025-banner.jpg", caption: "Protothon AI Grand Finale at Chitkara University 2025" },
-    { src: "https://www.chitkara.edu.in/wp-content/uploads/2025/07/Jazzee-thumb.webp", caption: "Hackathon 2025 - Winners" },
-    { src: "https://media.licdn.com/dms/image/v2/D5622AQFQ_M9Y3dqTMQ/feedshare-shrink_800/B56ZsqEjPyJ8Ag-/0/1765937398603?e=2147483647&v=beta&t=AQWqPfvd8TSJOi1zi2S3uWZu1p4UwXtEfJlgL3uLkpM", caption: "Alumni Meet 2025" },
-    { src: "https://www.chitkara.edu.in/wp-content/uploads/2018/03/BCA.jpg", caption: "Workshop - Web Development" },
-    { src: "https://www.chitkara.edu.in/wp-content/uploads/2024/01/Triumph-banner.jpg", caption: "Startup Pitch Competition" },
+    { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&auto=format", caption: "Tech Fest 2025 - Coding Competition" },
+    { src: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&auto=format", caption: "Cultural Night 2025 - Dance Performance" },
+    { src: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&auto=format", caption: "Sports Meet 2025 - Football Final" },
+    { src: "https://images.unsplash.com/photo-1591115765373-5207764f72e4?w=600&auto=format", caption: "Hackathon 2025 - Winners" },
+    { src: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&auto=format", caption: "Alumni Meet 2025" },
+    { src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&auto=format", caption: "Workshop - Web Development" }
 ];
 
 // ===== DOM ELEMENTS =====
@@ -145,7 +141,6 @@ const modalContent = document.getElementById('modalContent');
 const closeModal = document.getElementById('closeModal');
 const closeRegisterModal = document.getElementById('closeRegisterModal');
 const registrationForm = document.getElementById('registrationForm');
-const eventSelect = document.getElementById('eventSelect');
 const eventManagementList = document.getElementById('eventManagementList');
 const addEventBtn = document.getElementById('addEventBtn');
 const lightbox = document.getElementById('lightbox');
@@ -159,6 +154,10 @@ const backToStep1 = document.getElementById('backToStep1');
 const backToStep2 = document.getElementById('backToStep2');
 const eventSelectionGrid = document.getElementById('eventSelectionGrid');
 const successToast = document.getElementById('successToast');
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+const fabButton = document.getElementById('fabButton');
+const closeLightbox = document.querySelector('.close-lightbox');
 
 // ===== STATE MANAGEMENT =====
 let currentEventId = null;
@@ -176,7 +175,6 @@ function formatShortDate(dateString) {
     return new Date(dateString).toLocaleDateString('en-US', options);
 }
 
-// Calculate days remaining
 function getDaysRemaining(eventDate) {
     const today = new Date();
     const event = new Date(eventDate);
@@ -185,37 +183,48 @@ function getDaysRemaining(eventDate) {
     return diffDays;
 }
 
-// Calculate time remaining for countdown
 function getTimeRemaining(eventDate) {
     const total = new Date(eventDate) - new Date();
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
     const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
     const days = Math.floor(total / (1000 * 60 * 60 * 24));
-    
     return { total, days, hours, minutes, seconds };
 }
 
-// Update countdown timer
+function clearErrors() {
+    document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+}
+
+// ===== UPDATE COUNTDOWN =====
 function updateCountdown() {
     const featuredEvent = eventsData.find(e => e.featured) || eventsData[0];
     const timeRemaining = getTimeRemaining(featuredEvent.date);
     
-    document.getElementById('days').textContent = String(timeRemaining.days).padStart(2, '0');
-    document.getElementById('hours').textContent = String(timeRemaining.hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(timeRemaining.minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(timeRemaining.seconds).padStart(2, '0');
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
     
-    if (timeRemaining.total <= 0) {
-        document.getElementById('days').textContent = '00';
-        document.getElementById('hours').textContent = '00';
-        document.getElementById('minutes').textContent = '00';
-        document.getElementById('seconds').textContent = '00';
+    if (daysEl && hoursEl && minutesEl && secondsEl) {
+        daysEl.textContent = String(timeRemaining.days).padStart(2, '0');
+        hoursEl.textContent = String(timeRemaining.hours).padStart(2, '0');
+        minutesEl.textContent = String(timeRemaining.minutes).padStart(2, '0');
+        secondsEl.textContent = String(timeRemaining.seconds).padStart(2, '0');
+        
+        if (timeRemaining.total <= 0) {
+            daysEl.textContent = '00';
+            hoursEl.textContent = '00';
+            minutesEl.textContent = '00';
+            secondsEl.textContent = '00';
+        }
     }
 }
 
-// ===== RENDER EVENT CARDS with Filters =====
+// ===== RENDER EVENT CARDS =====
 function renderEventCards(filter = 'all') {
+    if (!eventGrid) return;
+    
     eventGrid.innerHTML = '';
     
     const filteredEvents = filter === 'all' 
@@ -227,8 +236,7 @@ function renderEventCards(filter = 'all') {
         const card = document.createElement('div');
         card.className = 'event-card';
         card.dataset.id = event.id;
-        card.dataset.category = event.category;
-        card.setAttribute('data-aos', 'fade-up');
+        card.dataset.category = event.category.toLowerCase();
         
         card.innerHTML = `
             <div class="card-img" style="background-image: linear-gradient(0deg, rgba(139,0,0,0.4), rgba(0,0,0,0.2)), url('${event.image}')">
@@ -256,13 +264,12 @@ function renderEventCards(filter = 'all') {
     });
 }
 
-// ===== OPEN EVENT DETAIL MODAL (Enhanced) =====
+// ===== OPEN EVENT DETAIL MODAL =====
 function openEventDetail(eventId) {
     const event = eventsData.find(e => e.id === eventId);
-    if (!event) return;
+    if (!event || !modalContent) return;
     
     currentEventId = eventId;
-    const daysLeft = getDaysRemaining(event.date);
     const registrationPercentage = (event.registeredCount / event.capacity) * 100;
     
     modalContent.innerHTML = `
@@ -301,8 +308,8 @@ function openEventDetail(eventId) {
                 <div class="meta-item">
                     <i class="fas fa-users"></i>
                     <div>
-                        <strong>Seats Available</strong>
-                        <span>${event.capacity - event.registeredCount} / ${event.capacity}</span>
+                        <strong>Seats</strong>
+                        <span>${event.capacity - event.registeredCount} left</span>
                     </div>
                 </div>
             </div>
@@ -335,21 +342,23 @@ function openEventDetail(eventId) {
     
     eventModal.classList.add('active');
     
-    document.getElementById('registerFromDetailBtn').addEventListener('click', () => {
+    document.getElementById('registerFromDetailBtn')?.addEventListener('click', () => {
         eventModal.classList.remove('active');
         openMultiStepRegisterModal(event.id);
     });
     
-    document.getElementById('shareEventBtn').addEventListener('click', () => {
+    document.getElementById('shareEventBtn')?.addEventListener('click', () => {
         alert('Share feature coming soon!');
     });
 }
 
-// ===== MULTI-STEP REGISTRATION MODAL =====
+// ===== MULTI-STEP REGISTRATION =====
 function openMultiStepRegisterModal(eventId = null) {
-    // Reset modal to step 1
+    if (!registerModal) return;
+    
+    // Reset to step 1
     document.querySelectorAll('.step-content').forEach(el => el.style.display = 'none');
-    document.getElementById('step1').style.display = 'block';
+    if (step1) step1.style.display = 'block';
     
     // Update step indicators
     document.querySelectorAll('.step').forEach((step, index) => {
@@ -357,7 +366,6 @@ function openMultiStepRegisterModal(eventId = null) {
         else step.classList.remove('active');
     });
     
-    // Render event selection grid
     renderEventSelectionGrid();
     
     if (eventId) {
@@ -367,22 +375,23 @@ function openMultiStepRegisterModal(eventId = null) {
                 card.classList.add('selected');
             }
         });
-        document.getElementById('toStep2').disabled = false;
+        if (toStep2) toStep2.disabled = false;
     }
     
     registerModal.classList.add('active');
 }
 
 function renderEventSelectionGrid() {
+    if (!eventSelectionGrid) return;
+    
     eventSelectionGrid.innerHTML = '';
     eventsData.forEach(event => {
-        const daysLeft = getDaysRemaining(event.date);
         const card = document.createElement('div');
         card.className = `event-select-card ${selectedEventForRegistration?.id === event.id ? 'selected' : ''}`;
         card.dataset.id = event.id;
         
         card.innerHTML = `
-            <img src="${event.image}" alt="${event.title}">
+            <img src="${event.image}" alt="${event.title}" loading="lazy">
             <div class="event-select-info">
                 <h4>${event.title}</h4>
                 <p><i class="fas fa-calendar"></i> ${formatShortDate(event.date)}</p>
@@ -398,7 +407,7 @@ function renderEventSelectionGrid() {
             document.querySelectorAll('.event-select-card').forEach(c => c.classList.remove('selected'));
             card.classList.add('selected');
             selectedEventForRegistration = eventsData.find(e => e.id == event.id);
-            document.getElementById('toStep2').disabled = false;
+            if (toStep2) toStep2.disabled = false;
         });
         
         eventSelectionGrid.appendChild(card);
@@ -406,125 +415,129 @@ function renderEventSelectionGrid() {
 }
 
 // Step Navigation
-document.getElementById('toStep2')?.addEventListener('click', () => {
-    if (!selectedEventForRegistration) return;
-    
-    document.getElementById('step1').style.display = 'none';
-    document.getElementById('step2').style.display = 'block';
-    
-    // Update step indicators
-    document.querySelectorAll('.step')[0].classList.remove('active');
-    document.querySelectorAll('.step')[1].classList.add('active');
-    
-    // Pre-fill event in dropdown if exists
-    if (eventSelect) {
-        eventSelect.value = selectedEventForRegistration.id;
-    }
-});
-
-document.getElementById('backToStep1')?.addEventListener('click', () => {
-    document.getElementById('step2').style.display = 'none';
-    document.getElementById('step1').style.display = 'block';
-    
-    document.querySelectorAll('.step')[1].classList.remove('active');
-    document.querySelectorAll('.step')[0].classList.add('active');
-});
-
-document.getElementById('toStep3')?.addEventListener('click', () => {
-    if (validateStep2()) {
-        // Populate summary
-        const summary = document.getElementById('registrationSummary');
-        summary.innerHTML = `
-            <div class="summary-item">
-                <span>Event:</span>
-                <strong>${selectedEventForRegistration.title}</strong>
-            </div>
-            <div class="summary-item">
-                <span>Name:</span>
-                <strong>${document.getElementById('fullName').value}</strong>
-            </div>
-            <div class="summary-item">
-                <span>Email:</span>
-                <strong>${document.getElementById('email').value}</strong>
-            </div>
-            <div class="summary-item">
-                <span>Phone:</span>
-                <strong>${document.getElementById('phone').value}</strong>
-            </div>
-            <div class="summary-item">
-                <span>College ID:</span>
-                <strong>${document.getElementById('collegeId').value}</strong>
-            </div>
-            <div class="summary-item">
-                <span>Department:</span>
-                <strong>${document.getElementById('department').value || 'Not specified'}</strong>
-            </div>
-        `;
+if (toStep2) {
+    toStep2.addEventListener('click', () => {
+        if (!selectedEventForRegistration) return;
         
-        document.getElementById('step2').style.display = 'none';
-        document.getElementById('step3').style.display = 'block';
+        if (step1) step1.style.display = 'none';
+        if (step2) step2.style.display = 'block';
         
-        document.querySelectorAll('.step')[1].classList.remove('active');
-        document.querySelectorAll('.step')[2].classList.add('active');
-    }
-});
+        document.querySelectorAll('.step')[0]?.classList.remove('active');
+        document.querySelectorAll('.step')[1]?.classList.add('active');
+    });
+}
 
-document.getElementById('backToStep2')?.addEventListener('click', () => {
-    document.getElementById('step3').style.display = 'none';
-    document.getElementById('step2').style.display = 'block';
-    
-    document.querySelectorAll('.step')[2].classList.remove('active');
-    document.querySelectorAll('.step')[1].classList.add('active');
-});
+if (backToStep1) {
+    backToStep1.addEventListener('click', () => {
+        if (step2) step2.style.display = 'none';
+        if (step1) step1.style.display = 'block';
+        
+        document.querySelectorAll('.step')[1]?.classList.remove('active');
+        document.querySelectorAll('.step')[0]?.classList.add('active');
+    });
+}
+
+if (toStep3) {
+    toStep3.addEventListener('click', () => {
+        if (validateStep2()) {
+            const summary = document.getElementById('registrationSummary');
+            if (summary && selectedEventForRegistration) {
+                summary.innerHTML = `
+                    <div class="summary-item">
+                        <span>Event:</span>
+                        <strong>${selectedEventForRegistration.title}</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Name:</span>
+                        <strong>${document.getElementById('fullName')?.value || ''}</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Email:</span>
+                        <strong>${document.getElementById('email')?.value || ''}</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Phone:</span>
+                        <strong>${document.getElementById('phone')?.value || ''}</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>College ID:</span>
+                        <strong>${document.getElementById('collegeId')?.value || ''}</strong>
+                    </div>
+                `;
+            }
+            
+            if (step2) step2.style.display = 'none';
+            if (step3) step3.style.display = 'block';
+            
+            document.querySelectorAll('.step')[1]?.classList.remove('active');
+            document.querySelectorAll('.step')[2]?.classList.add('active');
+        }
+    });
+}
+
+if (backToStep2) {
+    backToStep2.addEventListener('click', () => {
+        if (step3) step3.style.display = 'none';
+        if (step2) step2.style.display = 'block';
+        
+        document.querySelectorAll('.step')[2]?.classList.remove('active');
+        document.querySelectorAll('.step')[1]?.classList.add('active');
+    });
+}
 
 function validateStep2() {
     let isValid = true;
     clearErrors();
     
-    const fullName = document.getElementById('fullName').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const collegeId = document.getElementById('collegeId').value.trim();
-    const terms = document.getElementById('terms').checked;
+    const fullName = document.getElementById('fullName')?.value.trim() || '';
+    const email = document.getElementById('email')?.value.trim() || '';
+    const phone = document.getElementById('phone')?.value.trim() || '';
+    const collegeId = document.getElementById('collegeId')?.value.trim() || '';
+    const terms = document.getElementById('terms')?.checked || false;
     
     if (fullName.length < 3) {
-        document.getElementById('nameError').textContent = 'Name must be at least 3 characters';
+        const nameError = document.getElementById('nameError');
+        if (nameError) nameError.textContent = 'Name must be at least 3 characters';
         isValid = false;
     }
     
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-        document.getElementById('emailError').textContent = 'Enter a valid email address';
+        const emailError = document.getElementById('emailError');
+        if (emailError) emailError.textContent = 'Enter a valid email address';
         isValid = false;
     }
     
     const phoneRegex = /^[\d\s\-+()]{10,15}$/;
     if (!phoneRegex.test(phone)) {
-        document.getElementById('phoneError').textContent = 'Enter a valid phone number (10-15 digits)';
+        const phoneError = document.getElementById('phoneError');
+        if (phoneError) phoneError.textContent = 'Enter a valid phone number (10-15 digits)';
         isValid = false;
     }
     
     if (collegeId.length < 4) {
-        document.getElementById('collegeIdError').textContent = 'Enter a valid College ID';
+        const collegeIdError = document.getElementById('collegeIdError');
+        if (collegeIdError) collegeIdError.textContent = 'Enter a valid College ID';
         isValid = false;
     }
     
     if (!terms) {
-        document.getElementById('termsError').textContent = 'You must agree to the terms';
+        const termsError = document.getElementById('termsError');
+        if (termsError) termsError.textContent = 'You must agree to the terms';
         isValid = false;
     }
     
     return isValid;
 }
 
-// ===== RENDER GALLERY with Lightbox =====
+// ===== RENDER GALLERY =====
 function renderGallery() {
+    if (!galleryGrid) return;
+    
     galleryGrid.innerHTML = '';
     galleryImages.forEach((img, index) => {
         const item = document.createElement('div');
         item.className = 'gallery-item';
-        item.setAttribute('data-aos', 'zoom-in');
-        item.setAttribute('data-index', index);
         
         item.innerHTML = `
             <img src="${img.src}" alt="${img.caption}" loading="lazy">
@@ -537,172 +550,168 @@ function renderGallery() {
 }
 
 function openLightbox(index) {
-    const lightbox = document.querySelector('.lightbox-modal');
+    if (!lightbox) return;
+    
     const lightboxImg = document.querySelector('.lightbox-img');
     const lightboxCaption = document.querySelector('.lightbox-caption');
     
-    lightboxImg.src = galleryImages[index].src;
-    lightboxCaption.textContent = galleryImages[index].caption;
+    if (lightboxImg) lightboxImg.src = galleryImages[index].src;
+    if (lightboxCaption) lightboxCaption.textContent = galleryImages[index].caption;
     lightbox.classList.add('active');
 }
 
-// Close lightbox
-document.querySelector('.close-lightbox')?.addEventListener('click', () => {
-    document.querySelector('.lightbox-modal').classList.remove('active');
-});
-
-// ===== RENDER ADMIN EVENT MANAGEMENT LIST =====
+// ===== RENDER ADMIN EVENT LIST =====
 function renderAdminEventList() {
+    if (!eventManagementList) return;
+    
     eventManagementList.innerHTML = '';
     eventsData.forEach(event => {
-        const registrationPercentage = (event.registeredCount / event.capacity) * 100;
         const item = document.createElement('div');
-        item.className = 'manage-event-item';
+        item.className = 'event-item';
         item.innerHTML = `
-            <div class="event-info">
-                <span class="event-name"><i class="fas fa-calendar"></i> ${event.title}</span>
-                <span class="event-stats">${event.registeredCount}/${event.capacity}</span>
-            </div>
-            <div class="event-progress-small">
-                <div class="progress-bar-small" style="width: ${registrationPercentage}%"></div>
-            </div>
-            <span class="event-actions">
-                <i class="fas fa-edit" title="Edit" onclick="alert('Edit ${event.title} (Mock)')"></i>
-                <i class="fas fa-trash-alt" title="Delete" style="color: #d32f2f;" onclick="alert('Delete ${event.title} (Mock)')"></i>
-                <i class="fas fa-eye" title="View" onclick="openEventDetail(${event.id})"></i>
-            </span>
+            ${event.title} <span>${event.registeredCount}/${event.capacity}</span>
         `;
         eventManagementList.appendChild(item);
     });
 }
 
-// ===== FORM VALIDATION (Original) =====
-function clearErrors() {
-    document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-}
-
-// ===== REGISTRATION SUBMISSION (Enhanced) =====
-registrationForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    if (validateStep2()) {
-        // Show success toast
-        successToast.classList.add('show');
-        setTimeout(() => {
-            successToast.classList.remove('show');
-        }, 3000);
-        
-        // Update registered count
-        if (selectedEventForRegistration) {
-            selectedEventForRegistration.registeredCount++;
-        }
-        
-        // Close modal
-        registerModal.classList.remove('active');
-        
-        // Reset form
-        registrationForm.reset();
-        selectedEventForRegistration = null;
-        
-        // Refresh displays
-        renderEventCards(currentFilter);
-        renderAdminEventList();
-    }
-});
-
 // ===== FILTER EVENT CARDS =====
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        // Update active button
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         
-        // Filter events
-        currentFilter = btn.dataset.filter;
+        currentFilter = btn.dataset.filter || 'all';
         renderEventCards(currentFilter);
     });
 });
 
 // ===== CLOSE MODALS =====
-closeModal.addEventListener('click', () => {
-    eventModal.classList.remove('active');
-});
-
-closeRegisterModal.addEventListener('click', () => {
-    registerModal.classList.remove('active');
-    registrationForm.reset();
-    clearErrors();
-    selectedEventForRegistration = null;
-    
-    // Reset steps
-    document.querySelectorAll('.step-content').forEach(el => el.style.display = 'none');
-    document.getElementById('step1').style.display = 'block';
-    document.querySelectorAll('.step').forEach((step, index) => {
-        if (index === 0) step.classList.add('active');
-        else step.classList.remove('active');
+if (closeModal) {
+    closeModal.addEventListener('click', () => {
+        eventModal.classList.remove('active');
     });
-});
+}
 
-// Close modals when clicking outside
+if (closeRegisterModal) {
+    closeRegisterModal.addEventListener('click', () => {
+        registerModal.classList.remove('active');
+        if (registrationForm) registrationForm.reset();
+        clearErrors();
+        selectedEventForRegistration = null;
+        
+        document.querySelectorAll('.step-content').forEach(el => el.style.display = 'none');
+        if (step1) step1.style.display = 'block';
+        document.querySelectorAll('.step').forEach((step, index) => {
+            if (index === 0) step.classList.add('active');
+            else step.classList.remove('active');
+        });
+    });
+}
+
 window.addEventListener('click', (e) => {
     if (e.target === eventModal) {
         eventModal.classList.remove('active');
     }
     if (e.target === registerModal) {
         registerModal.classList.remove('active');
-        registrationForm.reset();
+        if (registrationForm) registrationForm.reset();
         clearErrors();
     }
+    if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+    }
 });
 
-// ===== ADD EVENT BUTTON MOCK =====
-addEventBtn.addEventListener('click', () => {
-    alert('Admin: Create new event form would open here.');
-});
+if (closeLightbox) {
+    closeLightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+    });
+}
 
-// ===== INITIALIZE =====
-document.addEventListener('DOMContentLoaded', () => {
-    // Render all sections
-    renderEventCards();
-    renderGallery();
-    renderAdminEventList();
-    
-    // Start countdown timer
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-    
-    // Smooth scroll for navigation
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
+// ===== REGISTRATION SUBMISSION =====
+if (registrationForm) {
+    registrationForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        if (validateStep2()) {
+            if (successToast) {
+                successToast.classList.add('show');
+                setTimeout(() => {
+                    successToast.classList.remove('show');
+                }, 3000);
             }
             
-            // Update active class
-            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-            link.classList.add('active');
+            if (selectedEventForRegistration) {
+                selectedEventForRegistration.registeredCount++;
+            }
             
-            // Close mobile menu if open
-            document.getElementById('navLinks').classList.remove('active');
-        });
+            registerModal.classList.remove('active');
+            registrationForm.reset();
+            selectedEventForRegistration = null;
+            
+            renderEventCards(currentFilter);
+            renderAdminEventList();
+            
+            // Reset steps
+            document.querySelectorAll('.step-content').forEach(el => el.style.display = 'none');
+            if (step1) step1.style.display = 'block';
+            document.querySelectorAll('.step').forEach((step, index) => {
+                if (index === 0) step.classList.add('active');
+                else step.classList.remove('active');
+            });
+        }
+    });
+}
+
+// ===== ADD EVENT BUTTON =====
+if (addEventBtn) {
+    addEventBtn.addEventListener('click', () => {
+        alert('Admin: Create new event form would open here.');
+    });
+}
+
+// ===== MOBILE MENU =====
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}
+
+// ===== FAB BUTTON =====
+if (fabButton) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            fabButton.classList.add('visible');
+        } else {
+            fabButton.classList.remove('visible');
+        }
     });
     
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menuToggle');
-    if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-            document.getElementById('navLinks').classList.toggle('active');
-        });
-    }
-    
-    // Particles effect (simple version)
-    createParticles();
+    fabButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// ===== SMOOTH SCROLL =====
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+        
+        if (navLinks) navLinks.classList.remove('active');
+    });
 });
 
-// Simple particle effect for hero section
+// ===== PARTICLES EFFECT =====
 function createParticles() {
     const particlesContainer = document.getElementById('particles');
     if (!particlesContainer) return;
@@ -719,6 +728,33 @@ function createParticles() {
     }
 }
 
-// Expose functions globally for onclick events
+// ===== PRELOADER =====
+window.addEventListener('load', () => {
+    const preloader = document.querySelector('.preloader');
+    if (preloader) {
+        preloader.classList.add('hidden');
+    }
+});
+
+// ===== INITIALIZE =====
+document.addEventListener('DOMContentLoaded', () => {
+    renderEventCards();
+    renderGallery();
+    renderAdminEventList();
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+    createParticles();
+    
+    // Initialize AOS
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    }
+});
+
+// ===== EXPOSE GLOBALLY =====
 window.openEventDetail = openEventDetail;
-window.openRegisterModal = openMultiStepRegisterModal;
+window.openMultiStepRegisterModal = openMultiStepRegisterModal;
